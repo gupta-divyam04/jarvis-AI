@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>J.A.R.V.I.S</title>
+        <link rel="icon" href="a865256d7ae3c7a90fec2e4cea5f2f17-modified.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="//unpkg.com/ml5@0.4.3/dist/ml5.min.js" target="_blank"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+      
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+      </head>
+      <body style="background-color: black; color: white;" onload="klo()">
+        <center>
+<h1><b>J.A.R.V.I.S
+    <br>Does not work in Mobile/ios</b></h1><br>
+    <img src="a865256d7ae3c7a90fec2e4cea5f2f17.gif" style="height: 300px; "><br>
+    <br><button class="btn btn-primary" onclick="kcko()">J.A.R.V.I.S Info</button>
+</center>
+      </body>
+      <script>
+        function klo(){
+        var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
+if( isMobile.any() );
+else{
+  setTimeout(() => {
+    window.location="main.html"
+  }, 1000);
+}} 
+r1= Math.floor((Math.random() * 8999) + 1000);
+function kcko(){
+    var coad = prompt("Please enter "+r1+" for checking you are not a robot","");
+        if (coad == null || coad == "" || coad != r1) {
+                    var synth = window.speechSynthesis; 
+        speech_data2 = "wrong code"
+        utterThis = new SpeechSynthesisUtterance(speech_data2)
+        synth.speak(utterThis)
+          } else if(coad == r1) {
+
+            window.location="info.html"
+          }
+        console.clear();
+}
+      </script>
+</html>
